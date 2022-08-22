@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 import androidx.core.os.CancellationSignal
 import com.example.plaenner.R//R을 가리키는 부분이 없었음. import 문제 (import me.blog.korn123.easydiary.R) 수정
+import com.example.plaenner.R.string.place_finger_description
 import me.blog.korn123.easydiary.extensions.makeSnackBar
 import me.blog.korn123.easydiary.extensions.makeToast
 import java.util.concurrent.Executor
@@ -162,10 +163,10 @@ class BiometricUtils {
 
                 // Set prompt info
                 val promptInfo = BiometricPrompt.PromptInfo.Builder()
-                    .setDescription(getString(R.string.place_finger_description))
+                    .setDescription(getString(place_finger_description))//Resource value값을 넣으라고 하는데 잘 모르겠어서 place_finger_description 넣음 '지문인식'같음
                     .setTitle(getString(R.string.app_name))
 //                .setSubtitle("Subtitle")
-                    .setNegativeButtonText(getString(R.string.cancel))
+                    .setNegativeButtonText(getString(R.string.cancel))//Resource value 값을 지정하라고 해서 이 또한 cancel이라고 함. '취소'
                     .build()
 
                 mBiometricPrompt.authenticate(promptInfo)

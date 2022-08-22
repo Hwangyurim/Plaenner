@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Plaenner</string>
+    <string name="place_finger_description">place_finger_description</string>
+    <string name="cancel">cancel</string>
 </resources>
