@@ -15,7 +15,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 import androidx.core.os.CancellationSignal
-import me.blog.korn123.easydiary.R
+import com.example.plaenner.R//R을 가리키는 부분이 없었음. import 문제 (import me.blog.korn123.easydiary.R) 수정
 import me.blog.korn123.easydiary.extensions.makeSnackBar
 import me.blog.korn123.easydiary.extensions.makeToast
 import java.util.concurrent.Executor
